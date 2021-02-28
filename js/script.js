@@ -65,7 +65,10 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
 
 
 /***
