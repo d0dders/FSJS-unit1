@@ -94,6 +94,8 @@ function printQuote() {
   html += `<p class="source">${quote.source}`;
   if (quote.citation) {
     html += `<span class="citation">${quote.citation}</span>`;
+  }
+  if (quote.year) {
     html += `<span class="year">${quote.year}</span>`;
   }
   if (!isNaN(quote.rating)) {
