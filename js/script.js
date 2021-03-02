@@ -67,7 +67,12 @@ const quotes = [
     year: "1984",
     rating: 4
   }
-]
+];
+
+/*** 
+ * `quotes` array 
+***/
+const colors = ['#870A22', '#5F4938', '#0A0408', '#4D4F58', '#124E4A'];
 
 
 /***
@@ -102,6 +107,15 @@ function printQuote() {
 
 
   document.getElementById('quote-box').innerHTML = html; 
+  document.body.style.backgroundColor = getRandomColor();
+}
+
+/***
+ * `getRandomColor` function
+***/
+function getRandomColor() {
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
 }
 
 
@@ -109,5 +123,10 @@ function printQuote() {
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+
+//Load a quote as soon as the page loads
+printQuote();
+//Set the quote to change every 10 secs
+setInterval(function(){ printQuote(); }, 10000);
