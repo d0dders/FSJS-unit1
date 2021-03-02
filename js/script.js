@@ -70,7 +70,7 @@ const quotes = [
 ];
 
 /*** 
- * `quotes` array 
+ * `colors` array 
 ***/
 const colors = ['#870A22', '#5F4938', '#0A0408', '#4D4F58', '#124E4A'];
 
